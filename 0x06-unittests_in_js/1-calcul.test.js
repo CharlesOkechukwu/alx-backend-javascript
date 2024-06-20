@@ -76,4 +76,37 @@ describe("calculateNumber", function() {
       assert.equal(calculateNumber('SUBTRACT', -3.2, -1.4), -2);
     });
   });
+
+  describe("DIVIDE", function() {
+    it("return Error when input is 4 and 0", function() {
+      assert.equal(calculateNumber('DIVIDE', 4, 0), "Error");
+    });
+    it("returns 2 when input is 4 and 2", function() {
+      assert.equal(calculateNumber('DIVIDE', 4, 2), 2);
+    });
+    it("returns 0.6666666666666666 when input is 2 and 3", function() {
+      assert.equal(calculateNumber('DIVIDE', 2, 3), 0.6666666666666666);
+    });
+    it("returns 1.5 when input is 3 and 1.5", function() {
+      assert.equal(calculateNumber('DIVIDE', 3, 1.5), 1.5);
+    });
+    it("returns 2 when input is 3.5 and 2", function() {
+      assert.equal(calculateNumber('DIVIDE', 3.5, 2), 2);
+    });
+    it("returns 3 when input is 3.2 and 1.4", function() {
+      assert.equal(calculateNumber('DIVIDE', 3.2, 1.4), 3);
+    });
+    it("returns 2 when input is -4 and -2", function() {
+      assert.equal(calculateNumber('DIVIDE', -4, -2), 2);
+    });
+    it("returns -2 when input is -4 and 2", function() {
+      assert.equal(calculateNumber('DIVIDE', -4, 2), -2);
+    });
+    it("returns 2.5 when input is -4.7 and -2.3", function() {
+      assert.equal(calculateNumber('DIVIDE', -4.7, -2.3), 2.5);
+    });
+    it("returns 0 when input is 0 and 3.4", function() {
+      assert.equal(calculateNumber('DIVIDE', 0, 3.4), 0);
+    });
+  });
 });
